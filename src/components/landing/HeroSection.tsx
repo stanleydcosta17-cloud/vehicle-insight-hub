@@ -9,29 +9,6 @@ const INDIAN_STATES = [
   "WB", "MP", "BR", "PB", "HR", "JK", "UK", "HP", "GA", "OR",
 ];
 
-const Navbar = () => (
-  <nav className="absolute top-0 left-0 right-0 z-50 px-4 md:px-8 py-4">
-    <div className="max-w-7xl mx-auto flex items-center justify-between">
-      <div className="flex items-center gap-2">
-        <div className="w-10 h-10 rounded-lg gradient-orange flex items-center justify-center">
-          <Search className="w-5 h-5 text-orange-foreground" />
-        </div>
-        <span className="font-display text-xl font-bold text-primary-foreground">
-          VehicleCheck
-        </span>
-      </div>
-      <div className="hidden md:flex items-center gap-8">
-        <a href="#features" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm font-medium">Features</a>
-        <a href="#how-it-works" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm font-medium">How It Works</a>
-        <a href="#security" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm font-medium">Security</a>
-      </div>
-      <div className="flex items-center gap-3">
-        <Button variant="hero-outline" size="sm">Login</Button>
-        <Button variant="orange" size="sm">Register</Button>
-      </div>
-    </div>
-  </nav>
-);
 
 const HeroSection = () => {
   const [plateNumber, setPlateNumber] = useState("");
@@ -46,10 +23,8 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-navy/90 via-navy/80 to-navy/95" />
       </div>
 
-      <Navbar />
-
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center pt-24 pb-16">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center pt-32 pb-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
